@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_light_primary">#6200EE</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#BB86FC</color>
+    <color name="md_theme_light_onPrimaryContainer">#000000</color>
+
+    <color name="md_theme_light_secondary">#03DAC5</color>
+    <color name="md_theme_light_onSecondary">#000000</color>
+    <color name="md_theme_light_secondaryContainer">#66FFF9</color>
+    <color name="md_theme_light_onSecondaryContainer">#000000</color>
+
+    <color name="md_theme_light_background">#FFFFFF</color>
+    <color name="md_theme_light_onBackground">#000000</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#000000</color>
+
+    <color name="md_theme_light_error">#B00020</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_color">#FFFFFF</color>
+
+    <color name="primary">#115F22</color>
+    <color name="primaryDark">#0D4B1A</color>
+    <color name="accent">#4CAF50</color>
+
+    <color name="background">#F5F5F5</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <color name="blockPast">#FFF4E5</color>
+    <color name="blockCurrent">#E5F6EB</color>
+    <color name="red">#D32F2F</color>
+    <color name="gray">#9E9E9E</color>
+
+
+</resources>

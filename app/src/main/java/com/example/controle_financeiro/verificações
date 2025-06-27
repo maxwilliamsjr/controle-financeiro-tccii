@@ -1,0 +1,125 @@
+1. Validação de campos obrigatórios:
+Todos os campos obrigatórios devem ser preenchidos antes de salvar qualquer item (ex: despesa, renda, categoria). Se não estiverem, deve exibir uma mensagem clara para o usuário.
+
+
+2. Validação e formatação de valor numérico:
+O campo de valor (ex: R$ 1.234,56) deve:
+
+Permitir apenas números.
+
+Formatar automaticamente com ponto para milhares e vírgula para centavos.
+
+Internamente, converter para Double corretamente (ex: "1.234,56" → 1234.56).
+
+
+3. DatePicker funcional e claro:
+O campo de data (como "data de recebimento" ou "data da despesa") deve usar o DatePickerDialog.
+
+A data deve ser exibida em formato legível (yyyy-MM-dd ou o que preferir).
+
+O campo deve ser clicável (mesmo que desabilitado para digitação direta).
+
+
+4. Scroll funcional para exibir todos os campos:
+As telas com muitos campos devem:
+
+Usar Column com verticalScroll.
+
+Garantir que o botão “Salvar” esteja sempre acessível, mesmo com o teclado aberto ou em telas pequenas.
+
+
+5. data de recebimento em cadastrar renda está cinza claro, diferente dos demais campos.
+
+
+6. verificar banco de dados, não ta salvando
+
+7. 🧠 Dica de segurança: use regras do Firestore
+   Depois que tudo estiver funcionando, ative a seguinte regra no Firestore para proteger os dados:
+
+   plaintext
+   Copiar
+   Editar
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       match /usuarios/{userId} {
+         allow read, write: if request.auth != null && request.auth.uid == userId;
+       }
+
+       match /{colecao=**}/{documento} {
+         allow read, write: if request.auth != null && request.auth.uid == resource.data.uid;
+       }
+     }
+   }
+   Isso garante que usuários só possam acessar dados próprios.
+
+8. Quando não tiver nada cadastrado, mostrar que não há, isso vale para todas as telas
+
+
+9.
+
+
+
+
+import android.widget.ImageView
+
+private lateinit var btnVoltar: ImageView
+btnVoltar = findViewById(R.id.btnVoltar)
+btnVoltar.setOnClickListener { finish() }
+
+val btnVoltar = findViewById<ImageView>(R.id.btnVoltar)
+        btnVoltar.setOnClickListener {
+            finish() // fecha a tela atual
+        }
+
+
+<!-- Barra superior com botão voltar e título -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#800080"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btnVoltar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Voltar"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerenciar Despesas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+
+
+
+
+import android.os.Build
+
+
+        window.statusBarColor = android.graphics.Color.BLACK
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            window.decorView.systemUiVisibility = 0
+        }
+
+
+
+
+
+
+
+

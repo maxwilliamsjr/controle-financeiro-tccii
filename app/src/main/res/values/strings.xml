@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Controle Financeiro</string>
+
+    <string name="drawer_open">Abrir menu</string>
+    <string name="drawer_close">Fechar menu</string>
+
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_sair">Sair</string>
+
+    <string name="bem_vindo">Bem-vindo ao Controle Financeiro!</string>
+    <string name="mes_anterior">MÊS ANTERIOR</string>
+    <string name="mes_atual">MÊS ATUAL</string>
+    <string name="total_geral">Total Geral: R$ 0,00</string>
+
+    <string name="btn_despesas">Gerenciar Despesas</string>
+    <string name="btn_rendas">Gerenciar Rendas</string>
+    <string name="btn_cartoes">Gerenciar Cartões</string>
+    <string name="btn_categorias">Gerenciar Categorias</string>
+    <string name="btn_metodos">Gerenciar Métodos de Pagamento</string>
+
+    <string-array name="opcoesSexo">
+        <item>Masculino</item>
+        <item>Feminino</item>
+        <item>Outro</item>
+    </string-array>
+
+</resources>
